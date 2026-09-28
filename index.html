@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Annpurna Family Restaurant | Pure Veg Kathiyawadi & Punjabi Dining (Khambhaliya)</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & DM Sans for ultra-modern UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Material Symbols Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Tailwind CSS CDN with White, Fresh Green & Vibrant Blue Palette -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: "#16a34a",       // Fresh Emerald Green
+              "green-dark": "#15803d",
+              "green-light": "#f0fdf4",
+              blue: "#2563eb",        // Vibrant Modern Blue
+              "blue-dark": "#1d4ed8",
+              "blue-light": "#eff6ff",
+            },
+            surface: "#ffffff",
+            "surface-subtle": "#f8fafc",
+            "surface-card": "#ffffff",
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "'DM Sans'", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+            card: "0 2px 12px 0 rgba(0, 0, 0, 0.04)",
+            floating: "0 10px 30px -5px rgba(37, 99, 235, 0.15)",
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-surface-subtle font-sans text-slate-800 antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="bg-gradient-to-r from-emerald-800 via-green-700 to-blue-700 text-white px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs flex justify-between items-center z-40 relative shadow-sm">
+    <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-1">
+      <div class="flex items-center gap-3 sm:gap-4 mx-auto sm:mx-0 flex-wrap justify-center">
+        <span class="flex items-center gap-1 font-medium">
+          <span class="material-symbols-outlined text-emerald-200 text-[15px]">location_on</span>
+          Station Road, Khambhaliya
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 border-l border-white/20 pl-3 font-medium">
+          <span class="material-symbols-outlined text-blue-200 text-[15px]">schedule</span>
+          11:00 AM – 11:00 PM
+        </span>
+        <span class="hidden lg:inline-flex items-center gap-1.5 border-l border-white/20 pl-3 font-medium">
+          <span class="material-symbols-outlined text-emerald-200 text-[15px]">verified</span>
+          100% Pure Veg
+        </span>
+      </div>
+      <a href="tel:+919825284920" class="flex items-center gap-1 text-white bg-white/10 hover:bg-white/20 px-2.5 py-0.5 rounded-full transition-colors font-semibold text-[10px] sm:text-[11px]">
+        <span class="material-symbols-outlined text-[14px]">call</span>
+        Call: +91 98252 84920
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN HEADER ==================== -->
+  <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 bg-gradient-to-br from-green-600 to-emerald-700 text-white rounded-xl sm:rounded-2xl flex items-center justify-center font-bold text-xl sm:text-2xl shadow-md shadow-green-600/20 group-hover:scale-105 transition-transform">
+          A
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none group-hover:text-brand-blue transition-colors">
+            Annpurna <span class="text-brand-green">Veg</span>
+          </span>
+          <span class="text-[9px] sm:text-[11px] font-semibold tracking-wider uppercase text-slate-500 leading-tight mt-0.5 sm:mt-1">
+            Family Restaurant · Khambhaliya
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-50 p-1.5 rounded-full border border-slate-200/60">
+        <a href="#home" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Home</a>
+        <a href="#menu" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Food Menu</a>
+        <a href="#signature" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Specials</a>
+        <a href="#philosophy" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Quality</a>
+        <a href="#hygiene" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Hygiene</a>
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white rounded-full transition-all">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+919825284920" class="px-4 py-2.5 rounded-full text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors flex items-center gap-2">
+          <span class="material-symbols-outlined text-brand-blue text-[18px]">call</span>
+          Call Restaurant
+        </a>
+
+        <button id="openCartBtn" class="bg-gradient-to-r from-brand-green to-emerald-600 text-white px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2.5 hover:shadow-lg hover:shadow-green-600/25 transition-all active:scale-95 shadow-md">
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span>Order Cart</span>
+          <span id="headerCartBadge" class="bg-white text-brand-green px-2.5 py-0.5 text-[11px] font-extrabold rounded-full hidden">
+            0 Items
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Header Controls -->
+      <div class="flex md:hidden items-center gap-2">
+        <a href="tel:+919825284920" class="w-9 h-9 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-slate-200" aria-label="Call Restaurant">
+          <span class="material-symbols-outlined text-brand-blue text-[18px]">call</span>
+        </a>
+
+        <button id="openMobileCartBtn" class="relative w-9 h-9 rounded-full bg-brand-green text-white flex items-center justify-center shadow-md shadow-green-600/20" aria-label="Cart">
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span id="mobileHeaderBadge" class="absolute -top-1 -right-1 bg-brand-blue text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border border-white hidden">
+            0
+          </span>
+        </button>
+
+        <button id="toggleMobileMenuBtn" class="w-9 h-9 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-slate-200" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-[18px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawerNav" class="hidden md:hidden bg-white border-b border-slate-200 px-5 py-4 space-y-2.5 shadow-md">
+      <a href="#home" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Home</a>
+      <a href="#menu" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Food Menu & Order</a>
+      <a href="#signature" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Annapurna Specials</a>
+      <a href="#philosophy" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Food Philosophy & Quality</a>
+      <a href="#hygiene" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Hygiene Standards</a>
+      <a href="#contact" class="mobile-nav-link block text-sm font-bold text-slate-800 hover:text-brand-blue py-1.5 border-b border-slate-100">Contact & Map Location</a>
+      <div class="pt-1.5 flex flex-col gap-2">
+        <a href="tel:+919825284920" class="w-full text-center bg-blue-50 text-brand-blue py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 border border-blue-200">
+          <span class="material-symbols-outlined text-[16px]">call</span>
+          Call Restaurant (+91 98252 84920)
+        </a>
+        <button id="drawerCartBtn" class="w-full bg-brand-green text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md">
+          <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+          View Order Cart
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (COMPACT MOBILE HEIGHT) ==================== -->
+  <section id="home" class="relative w-full bg-gradient-to-br from-slate-50 via-green-50/40 to-blue-50/50 py-8 sm:py-16 lg:py-24 overflow-hidden border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-green-200 shadow-xs text-brand-green text-[10px] sm:text-xs font-bold uppercase tracking-wider mx-auto lg:mx-0">
+            <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+            100% Pure Veg · Kathiyawadi & Punjabi
+          </div>
+
+          <h1 class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-snug sm:leading-[1.15]">
+            Delicious Pure Veg Dining in <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-blue-600">Khambhaliya</span>
+          </h1>
+
+          <p class="text-slate-600 text-xs sm:text-base lg:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
+            Experience authentic Saurashtra Kathiyawadi Shaak, clay-tawa Bajra Rotla with fresh white butter, Punjabi Paneer curries, and royal Thalis prepared with organic millets & cold-pressed oils.
+          </p>
+
+          <div class="flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1">
+            <a href="#menu" class="flex-1 sm:flex-initial bg-gradient-to-r from-brand-green to-emerald-600 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-full text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-green-600/25 transition-all shadow-md active:scale-95">
+              <span>Order Online</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+
+            <a href="#signature" class="flex-1 sm:flex-initial bg-white text-slate-700 border border-slate-200 px-5 sm:px-8 py-3 sm:py-4 rounded-full text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 hover:bg-slate-50 transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-brand-blue text-[16px]">auto_awesome</span>
+              <span>Specials</span>
+            </a>
+          </div>
+
+          <!-- Feature Cards Bar (Compact on mobile) -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 pt-3 sm:pt-6">
+            <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-2">
+              <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-green-100 text-brand-green flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[16px] sm:text-[20px]">verified</span>
+              </div>
+              <div class="text-left leading-tight">
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900">100% Pure Veg</h4>
+                <p class="text-[9px] sm:text-[11px] text-slate-500">Pure kitchen</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-2">
+              <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[16px] sm:text-[20px]">skillet</span>
+              </div>
+              <div class="text-left leading-tight">
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900">Clay Rotla</h4>
+                <p class="text-[9px] sm:text-[11px] text-slate-500">Bajra & Jowar</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-2">
+              <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-green-100 text-brand-green flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[16px] sm:text-[20px]">water_drop</span>
+              </div>
+              <div class="text-left leading-tight">
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900">Cold-Pressed</h4>
+                <p class="text-[9px] sm:text-[11px] text-slate-500">Groundnut oil</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-2">
+              <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[16px] sm:text-[20px]">clean_hands</span>
+              </div>
+              <div class="text-left leading-tight">
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900">RO Water</h4>
+                <p class="text-[9px] sm:text-[11px] text-slate-500">Hygienic prep</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase (Compact height on mobile) -->
+        <div class="lg:col-span-5 relative hidden sm:block">
+          <div class="relative bg-white p-3 rounded-3xl shadow-xl border border-slate-200">
+            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Gujarati Thali Feast" class="w-full h-64 sm:h-96 object-cover rounded-2xl">
+            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 shadow-lg flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-green">Most Popular</span>
+                <h3 class="font-extrabold text-slate-900 text-base">Special Gujarati Thali</h3>
+                <p class="text-xs text-slate-500">Full meal with 3 veggies, rotla & sweets</p>
+              </div>
+              <span class="text-lg font-black text-brand-green bg-green-50 px-3 py-1 rounded-xl">₹280</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SIGNATURE SPECIALS ==================== -->
+  <section id="signature" class="py-10 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-12 gap-2">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-blue mb-1">
+            <span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+            Chef's Recommended
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+            Signature Annapurna Delights
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-base mt-1 max-w-xl">
+            Hand-crafted regional specialties loved by food connoisseurs across Khambhaliya.
+          </p>
+        </div>
+
+        <a href="#menu" class="text-xs uppercase tracking-wider font-extrabold text-brand-green hover:text-brand-blue transition-colors flex items-center gap-1">
+          <span>View All Dishes</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Signature Items Grid (Compact Mobile Card List) -->
+      <div id="signatureGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN MENU SECTION ==================== -->
+  <section id="menu" class="py-10 sm:py-20 bg-surface-subtle border-b border-slate-200 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-1 sm:space-y-2">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-green">
+          Live Food Ordering Menu
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+          Explore Our Pure Veg Menu
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-base">
+          Select your favorite Kathiyawadi, Punjabi, or South Indian dishes to add them directly to your live cart.
+        </p>
+      </div>
+
+      <!-- Search & Dietary Filters Box -->
+      <div class="w-full bg-white p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-xs space-y-3 sm:space-y-4">
+        <!-- Search Input Bar -->
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined text-slate-400 absolute left-3.5 text-[20px]">search</span>
+          <input type="text" id="searchInput" placeholder="Search Paneer, Thali, Bajra Rotla, Sev Tameta, Dosa..." class="w-full pl-10 pr-9 py-2.5 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-sans text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-blue focus:bg-white transition-all shadow-inner">
+          <button id="clearSearchBtn" class="absolute right-3 text-slate-400 hover:text-slate-700 hidden">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+
+        <!-- Dietary Chips -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-0.5">
+          <div class="flex items-center gap-1.5 text-xs text-slate-500 font-extrabold uppercase tracking-wider shrink-0">
+            <span class="material-symbols-outlined text-brand-blue text-[16px]">tune</span>
+            Dietary Filter:
+          </div>
+
+          <div id="dietaryFilterContainer" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
+            <!-- Filter chips rendered via JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Category Navigator -->
+      <div class="sticky top-16 sm:top-20 z-30 w-full bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl sm:rounded-2xl py-2 px-3 shadow-xs">
+        <div id="categoryNavContainer" class="max-w-7xl mx-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar scroll-smooth">
+          <!-- Category buttons rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Menu Items Display Grid -->
+      <div id="menuItemsContainer" class="space-y-8 sm:space-y-12">
+        <!-- Grouped category lists rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOD PHILOSOPHY ==================== -->
+  <section id="philosophy" class="py-10 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2 sm:space-y-3">
+        <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-green">
+          <span class="material-symbols-outlined text-[16px]">eco</span>
+          Purity & Health First
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+          Our Kitchen Standards & Food Philosophy
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
+          At Annpurna Family Restaurant, we believe that pure food fosters good health and peace of mind. Every meal is cooked with honor, love, and strict hygiene.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/80 space-y-3 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-green-100 text-brand-green flex items-center justify-center font-bold">
+            <span class="material-symbols-outlined text-[22px] sm:text-[26px]">grain</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Organic Ancient Millets</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            We source organic Bajra (Pearl Millet) and Jowar (Sorghum) directly from local Saurashtra farms, milling them weekly to guarantee maximum fiber, nutrients, and natural flavor.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/80 space-y-3 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center font-bold">
+            <span class="material-symbols-outlined text-[22px] sm:text-[26px]">water_drop</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Cold-Pressed Groundnut Oil</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            We never use cheap palm or hydrogenated fats. All curries are tempered in 100% pure cold-pressed groundnut oil, and our Rotlas are served with fresh white butter.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/80 space-y-3 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-green-100 text-brand-green flex items-center justify-center font-bold">
+            <span class="material-symbols-outlined text-[22px] sm:text-[26px]">sparkles</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Zero Synthetic Dyes</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Our red gravies get their rich hue naturally from sun-dried Kashmiri chillies and fresh tomatoes—never artificial dyes, MSG, or chemical preservatives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HYGIENE & NUTRITION ==================== -->
+  <section id="hygiene" class="py-10 sm:py-20 bg-surface-subtle border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-blue">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            Uncompromised Quality
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+            Hygiene & Nutrition You Can Trust
+          </h2>
+
+          <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
+            We understand that eating out with family requires total trust. That's why <strong class="text-slate-900 font-bold">Annpurna Family Restaurant</strong> maintains rigorous cleanliness standards from vegetable washing to final packaging.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs space-y-1">
+              <div class="flex items-center gap-1.5 text-brand-green font-bold text-xs uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                100% RO Purified Water
+              </div>
+              <p class="text-xs text-slate-600">All drinking water, gravies, soups and cooking liquids use multi-stage RO filtered water.</p>
+            </div>
+
+            <div class="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs space-y-1">
+              <div class="flex items-center gap-1.5 text-brand-green font-bold text-xs uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Stainless Steel Kitchen
+              </div>
+              <p class="text-xs text-slate-600">Guests can view our open kitchen where chefs wear head caps, gloves, and aprons.</p>
+            </div>
+
+            <div class="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs space-y-1">
+              <div class="flex items-center gap-1.5 text-brand-green font-bold text-xs uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Daily Fresh Vegetables
+              </div>
+              <p class="text-xs text-slate-600">We buy fresh tomatoes, eggplant, garlic, and greens from local Khambhaliya farmers daily.</p>
+            </div>
+
+            <div class="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs space-y-1">
+              <div class="flex items-center gap-1.5 text-brand-green font-bold text-xs uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Strict Jain Protocols
+              </div>
+              <p class="text-xs text-slate-600">Jain meals are cooked in designated sanitized pans with zero onion, garlic, or root veggies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-gradient-to-br from-green-700 via-emerald-800 to-blue-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-xl space-y-4 relative overflow-hidden">
+          <div class="inline-flex items-center gap-1.5 text-emerald-200 text-xs font-extrabold uppercase tracking-widest">
+            <span class="material-symbols-outlined text-[16px]">sparkles</span>
+            Dining Safety Promise
+          </div>
+
+          <h3 class="text-xl sm:text-3xl font-extrabold text-white">
+            Cooked Fresh On Every Order
+          </h3>
+
+          <p class="text-xs sm:text-sm text-emerald-100 leading-relaxed">
+            We never pre-cook curries in bulk or store leftover gravy. Every single dish—from hot Bajra Rotla to Paneer Tikka Masala—is prepared fresh right after you place your order.
+          </p>
+
+          <div class="pt-3 border-t border-white/20 flex justify-between items-center text-xs">
+            <div>
+              <span class="block text-white font-extrabold">Station Road Branch</span>
+              <span class="text-emerald-100">Khambhaliya, Devbhumi Dwarka</span>
+            </div>
+            <a href="tel:+919825284920" class="bg-white text-emerald-900 font-extrabold px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider hover:bg-emerald-50">
+              Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section id="gallery" class="py-10 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6 sm:mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest font-extrabold text-brand-blue mb-1">
+          <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+          Visual Journey
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+          Culinary Artistry & Ambiance
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-base mt-1 max-w-xl">
+          A glimpse into the vibrant colors, aromas, and traditional thali presentations at Annpurna Family Restaurant.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Special Gujarati Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-emerald-300 block mb-0.5">Thali Experience</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Special Gujarati Thali</h4>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=80" alt="Kathiyawadi Feast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-blue-300 block mb-0.5">Regional Cuisine</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Kathiyawadi Feast</h4>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80" alt="Bajra Rotla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-emerald-300 block mb-0.5">Artisanal Breads</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Bajra Rotla</h4>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Dal Baati Churma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-blue-300 block mb-0.5">Rajasthani Specialty</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Dal Baati Churma</h4>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80" alt="Special Paneer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-emerald-300 block mb-0.5">Chef's Creation</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Special Paneer</h4>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-4/3 shadow-xs border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Masala Chaas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 right-2.5 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-blue-300 block mb-0.5">Fresh Beverages</span>
+            <h4 class="font-extrabold text-xs sm:text-lg text-white truncate">Masala Chaas</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS & FAQ ==================== -->
+  <section class="py-10 sm:py-20 bg-surface-subtle border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
+      <div>
+        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12 space-y-1">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Guest Feedback</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">Loved by Families & Pilgrims</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex text-amber-400 text-xs sm:text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                "The Kathiyawadi Thali with Bajra Rotla and fresh white butter is unbeatable in Khambhaliya! Very authentic garlic chutney and courteous service."
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-green-100 text-brand-green flex items-center justify-center font-extrabold text-xs">R</div>
+              <div>
+                <h4 class="font-extrabold text-xs text-slate-900">Rajeshbhai Patel</h4>
+                <span class="text-[10px] text-slate-500">Khambhaliya Resident</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex text-amber-400 text-xs sm:text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                "We ordered Annapurna Special Paneer and Special Gujarati Thali for a family gathering. The food was delivered hot, hygienic, and tasted like home."
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center font-extrabold text-xs">A</div>
+              <div>
+                <h4 class="font-extrabold text-xs text-slate-900">Dr. Anjali Mehta</h4>
+                <span class="text-[10px] text-slate-500">Jamnagar Visitor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex text-amber-400 text-xs sm:text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                "Best place for pure vegetarian Jain food. They take special care to cook Jain dishes without onion or garlic in separate utensils."
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-green-100 text-brand-green flex items-center justify-center font-extrabold text-xs">J</div>
+              <div>
+                <h4 class="font-extrabold text-xs text-slate-900">Jignesh Shah</h4>
+                <span class="text-[10px] text-slate-500">Station Road, Khambhaliya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="max-w-3xl mx-auto pt-6 border-t border-slate-200 space-y-6">
+        <div class="text-center space-y-1">
+          <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+            <span class="material-symbols-outlined text-[16px]">help</span>
+            Questions & Answers
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+        </div>
+
+        <div id="faqContainer" class="space-y-2.5">
+          <!-- Accordions rendered via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOCATION & CONTACT ==================== -->
+  <section id="contact" class="py-10 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4 sm:space-y-6">
+          <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-brand-green">
+            <span class="material-symbols-outlined text-[16px]">location_on</span>
+            Location & Hours
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+            Visit or Call Annpurna Family Restaurant
+          </h2>
+
+          <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
+            Conveniently located in the heart of Khambhaliya, Devbhumi Dwarka District. Drop in for a wholesome thali experience or order online for fast home delivery.
+          </p>
+
+          <div class="space-y-2.5 pt-1">
+            <div class="bg-slate-50 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 flex items-start gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-green-100 text-brand-green flex items-center justify-center shrink-0 font-bold">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px]">location_on</span>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="font-extrabold text-xs uppercase tracking-wider text-slate-900">Restaurant Address</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Station Road, Near Bus Stand, Khambhaliya, Devbhumi Dwarka District, Gujarat 361305.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 flex items-start gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center shrink-0 font-bold">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px]">call</span>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="font-extrabold text-xs uppercase tracking-wider text-slate-900">Phone & Orders</h4>
+                <p class="text-xs text-slate-600">Call for order inquiry, party bookings or home delivery:</p>
+                <a href="tel:+919825284920" class="inline-block text-xs sm:text-sm font-extrabold text-brand-blue hover:underline pt-0.5">
+                  +91 98252 84920 / +91 94272 10984
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/80 flex items-start gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-green-100 text-brand-green flex items-center justify-center shrink-0 font-bold">
+                <span class="material-symbols-outlined text-[18px] sm:text-[20px]">schedule</span>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="font-extrabold text-xs uppercase tracking-wider text-slate-900">Opening Hours</h4>
+                <p class="text-xs text-slate-600">
+                  Monday to Sunday: <strong>11:00 AM – 11:00 PM</strong> (Non-stop service)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-1 flex flex-wrap gap-2.5">
+            <a href="tel:+919825284920" class="bg-gradient-to-r from-brand-green to-emerald-600 text-white px-5 py-3 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+              <span class="material-symbols-outlined text-[16px]">call</span>
+              <span>Call Now</span>
+            </a>
+
+            <a href="https://share.google/6EZlYC5a7JR7gNARK" target="_blank" rel="noopener noreferrer" class="bg-slate-100 text-slate-800 px-5 py-3 rounded-full text-xs font-extrabold uppercase tracking-wider hover:bg-slate-200 transition-colors flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-brand-blue text-[16px]">explore</span>
+              <span>Google Business Profile</span>
+              <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-slate-50 border border-slate-200/80 p-4 sm:p-8 rounded-2xl sm:rounded-3xl space-y-4">
+          <div class="space-y-0.5">
+            <span class="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-brand-blue">Google Maps Location</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">Annpurna Family Restaurant</h3>
+          </div>
+
+          <div class="w-full h-48 sm:h-64 bg-white relative flex items-center justify-center border border-slate-200 rounded-xl sm:rounded-2xl overflow-hidden shadow-inner">
+            <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14749.697010411322!2d69.6450!3d22.2135!2m3!1f0!2f0!3f0!3m2!1i1024!2i786!4f13.1!3m3!1m2!1s0x3956bf8f00000001%3A0x1!2sKhambhaliya%2C+Gujarat!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Located on Station Road near the Bus Stand. Ample parking space available for cars and two-wheelers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PERSISTENT MOBILE BOTTOM CART BAR ==================== -->
+  <div id="stickyCartBar" class="fixed bottom-0 inset-x-0 z-40 p-2.5 sm:p-4 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl hidden">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex flex-col">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+          <span id="stickyItemCount" class="text-[10px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-500">0 Items Selected</span>
+        </div>
+        <span id="stickyTotalPrice" class="text-lg sm:text-2xl font-black text-slate-900 leading-tight">
+          ₹0 <span class="text-[10px] sm:text-xs font-sans text-slate-500 font-normal">(Live Total)</span>
+        </span>
+      </div>
+
+      <button id="stickyViewOrderBtn" class="bg-gradient-to-r from-brand-green to-emerald-600 text-white px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-full text-xs uppercase font-extrabold tracking-wider flex items-center gap-1.5 shadow-md">
+        <span>View Order</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== CART DRAWER / MODAL ==================== -->
+  <div id="cartModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex justify-end hidden">
+    <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between overflow-hidden">
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 bg-gradient-to-r from-green-700 to-emerald-800 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-[20px]">shopping_bag</span>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-extrabold text-white leading-none">Your Food Order</h3>
+            <span class="text-[10px] text-emerald-100 uppercase tracking-widest font-medium">Annpurna Family Restaurant</span>
+          </div>
+        </div>
+        <button id="closeCartBtn" class="p-1 text-white/80 hover:text-white">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <!-- Order Type Toggle -->
+      <div class="bg-slate-50 p-2.5 border-b border-slate-200 flex gap-2">
+        <button id="cartDeliveryToggle" class="flex-1 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-brand-green text-white shadow-xs">🛵 Doorstep Delivery</button>
+        <button id="cartPickupToggle" class="flex-1 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">🛍️ Restaurant Pickup</button>
+      </div>
+
+      <!-- Items Container -->
+      <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-2.5">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Footer & Total Summary -->
+      <div id="cartFooter" class="p-4 sm:p-6 bg-slate-50 border-t border-slate-200 space-y-3.5 hidden">
+        <div class="space-y-1 text-xs text-slate-600">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="cartSubtotalText" class="font-bold text-slate-800">₹0</span>
+          </div>
+          <div class="flex justify-between">
+            <span id="deliveryLabel">Delivery Charges (Khambhaliya)</span>
+            <span id="cartDeliveryText" class="font-bold text-slate-800">₹40</span>
+          </div>
+          <div class="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-200">
+            <span>Grand Total</span>
+            <span id="cartGrandTotalText" class="text-brand-green text-lg font-black">₹0</span>
+          </div>
+        </div>
+
+        <button id="proceedToCheckoutBtn" class="w-full bg-gradient-to-r from-brand-green to-emerald-600 text-white py-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+          <span>Proceed to Checkout</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT FORM MODAL ==================== -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto hidden">
+    <div class="w-full max-w-lg bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-4 sm:my-8">
+      <div class="p-4 sm:p-6 bg-gradient-to-r from-green-700 to-emerald-800 text-white flex items-center justify-between">
+        <div>
+          <h3 class="text-lg sm:text-2xl font-extrabold text-white leading-none">Checkout & Details</h3>
+          <span class="text-[10px] text-emerald-100 uppercase tracking-widest font-medium">Annpurna Family Restaurant · Khambhaliya</span>
+        </div>
+        <button id="closeCheckoutBtn" class="p-1 text-white/80 hover:text-white">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <form id="checkoutForm" class="p-4 sm:p-6 space-y-3.5">
+        <div class="space-y-1">
+          <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-700">Order Type</label>
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" id="chkDeliveryBtn" class="py-2 px-3 rounded-xl text-xs font-extrabold uppercase tracking-wider border bg-brand-green text-white border-brand-green shadow-xs">🛵 Doorstep Delivery</button>
+            <button type="button" id="chkPickupBtn" class="py-2 px-3 rounded-xl text-xs font-extrabold uppercase tracking-wider border bg-slate-50 text-slate-600 border-slate-200">🛍️ Takeaway Pickup</button>
+          </div>
+        </div>
+
+        <div class="space-y-2.5 pt-0.5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Full Name <span class="text-red-500">*</span></label>
+            <input type="text" id="custName" placeholder="e.g. Rajeshbhai Patel" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white">
+            <p id="errCustName" class="text-[11px] text-red-500 mt-1 hidden">Please enter your full name.</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Mobile Number <span class="text-red-500">*</span></label>
+            <input type="tel" id="custPhone" placeholder="e.g. 9825284920" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white">
+            <p id="errCustPhone" class="text-[11px] text-red-500 mt-1 hidden">Please enter a valid 10-digit mobile number.</p>
+          </div>
+
+          <div id="addressGroup">
+            <label class="block text-xs font-bold text-slate-700 mb-1">Delivery Address in Khambhaliya <span class="text-red-500">*</span></label>
+            <textarea id="custAddress" rows="2" placeholder="Street address, house no, colony name..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white"></textarea>
+            <p id="errCustAddress" class="text-[11px] text-red-500 mt-1 hidden">Address is required for delivery.</p>
+          </div>
+
+          <div id="landmarkGroup">
+            <label class="block text-xs font-bold text-slate-700 mb-1">Landmark (Optional)</label>
+            <input type="text" id="custLandmark" placeholder="Near Bus Stand, Opp. Bank, etc." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white">
+          </div>
+
+          <div id="pickupTimeGroup" class="hidden">
+            <label class="block text-xs font-bold text-slate-700 mb-1">Expected Pickup Time (Optional)</label>
+            <input type="text" id="custPickupTime" placeholder="e.g. In 20 minutes (around 1:30 PM)" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Cooking Instructions / Notes (Optional)</label>
+            <input type="text" id="custNotes" placeholder="e.g. Extra white butter on rotla, medium spicy curry" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-brand-blue focus:bg-white">
+          </div>
+        </div>
+
+        <div id="checkoutErrorBanner" class="bg-red-50 text-red-700 p-2.5 rounded-xl border border-red-200 text-xs hidden"></div>
+
+        <div class="pt-3 border-t border-slate-200 space-y-2.5">
+          <div class="flex justify-between items-center text-xs text-slate-500 font-medium">
+            <span>Grand Total</span>
+            <span id="chkGrandTotalText" class="text-lg font-extrabold text-slate-900">₹0</span>
+          </div>
+
+          <button type="submit" id="submitOrderBtn" class="w-full bg-gradient-to-r from-brand-green to-emerald-600 text-white py-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+            <span>Place Order</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== ORDER CONFIRMATION MODAL ==================== -->
+  <div id="confirmationModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto hidden">
+    <div class="w-full max-w-md bg-white rounded-2xl sm:rounded-3xl border border-slate-200 shadow-2xl p-5 sm:p-8 space-y-5 text-center">
+      <div class="w-14 h-14 bg-emerald-100 text-brand-green rounded-full flex items-center justify-center mx-auto shadow-sm">
+        <span class="material-symbols-outlined text-[32px]">done</span>
+      </div>
+
+      <div class="space-y-1">
+        <span class="text-[10px] uppercase tracking-widest font-extrabold text-brand-blue">Order Request Received</span>
+        <h3 id="confCustomerName" class="text-xl sm:text-3xl font-extrabold text-slate-900">Thank You!</h3>
+        <p class="text-xs text-slate-500">Order ID: <strong id="confOrderId" class="text-brand-green font-bold">#AFR-0000</strong></p>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-left space-y-2.5">
+        <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-200">
+          <span id="confOrderType" class="font-extrabold text-slate-900 uppercase tracking-wider">🛵 Doorstep Delivery</span>
+          <span id="confEstimatedTime" class="bg-green-100 text-brand-green px-2.5 py-0.5 rounded-full font-bold text-[10px]">35 - 45 Mins</span>
+        </div>
+
+        <div class="space-y-1 text-xs text-slate-600">
+          <div class="flex justify-between">
+            <span>Customer Phone:</span>
+            <strong id="confCustomerPhone" class="text-slate-900">---</strong>
+          </div>
+          <div id="confAddressRow" class="flex justify-between">
+            <span>Address:</span>
+            <strong id="confCustomerAddress" class="text-slate-900 text-right max-w-[180px] truncate">---</strong>
+          </div>
+          <div class="flex justify-between pt-1 border-t border-slate-200 text-sm font-extrabold text-slate-900">
+            <span>Total Amount:</span>
+            <span id="confGrandTotal" class="text-brand-green font-black">₹0</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="confItemsSummary" class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-left space-y-1.5 max-h-32 overflow-y-auto">
+        <!-- List rendered dynamically -->
+      </div>
+
+      <div class="space-y-2 pt-1">
+        <a href="tel:+919825284920" class="w-full bg-brand-green text-white py-3 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+          <span class="material-symbols-outlined text-[16px]">call</span>
+          <span>Call Restaurant (+91 98252 84920)</span>
+        </a>
+
+        <button id="closeConfirmationBtn" class="w-full bg-slate-100 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-slate-700 hover:bg-slate-200">
+          Back to Menu & Home
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-900 text-white pt-12 pb-24 sm:pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+        <div class="space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center font-extrabold text-xl">
+              A
+            </div>
+            <div>
+              <h3 class="text-lg font-extrabold text-white leading-none">Annpurna Family Restaurant</h3>
+              <span class="text-[10px] uppercase tracking-widest text-slate-400">Khambhaliya · Devbhumi Dwarka</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+            Serving 100% Pure Vegetarian Gujarati, Kathiyawadi, Punjabi, Rajasthani and South Indian delicacies. Crafted with organic millets, clay-tawa rotlas, and pure ghee in a hygienic kitchen.
+          </p>
+
+          <div class="flex items-center gap-1.5 text-xs text-emerald-400 font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[15px]">workspace_premium</span>
+            <span>FSSAI License No: 10021064000123</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-xs font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-1.5">Navigation</h4>
+          <ul class="space-y-1.5 text-xs text-slate-400 font-medium">
+            <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#menu" class="hover:text-white transition-colors">Food Menu & Order</a></li>
+            <li><a href="#signature" class="hover:text-white transition-colors">Annapurna Specials</a></li>
+            <li><a href="#philosophy" class="hover:text-white transition-colors">Food Philosophy</a></li>
+            <li><a href="#hygiene" class="hover:text-white transition-colors">Hygiene Standards</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact & Map</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-xs font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-1.5">Contact Us</h4>
+          <div class="space-y-1.5 text-xs text-slate-400">
+            <div class="flex items-start gap-1.5">
+              <span class="material-symbols-outlined text-emerald-400 text-[15px]">location_on</span>
+              <span>Station Road, Near Bus Stand, Khambhaliya, Gujarat 361305</span>
+            </div>
+            <div class="flex items-center gap-1.5 pt-0.5">
+              <span class="material-symbols-outlined text-blue-400 text-[15px]">call</span>
+              <a href="tel:+919825284920" class="hover:text-white font-bold text-white">+91 98252 84920</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-emerald-400 text-[15px]">schedule</span>
+              <span>11:00 AM – 11:00 PM (Daily)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+        <p>© 2026 Annpurna Family Restaurant. All rights reserved.</p>
+        <p>Pure Vegetarian Dining in Khambhaliya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

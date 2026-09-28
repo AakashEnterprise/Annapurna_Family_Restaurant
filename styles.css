@@ -1,0 +1,51 @@
+/* Custom Modern Styles for Annpurna Family Restaurant */
+
+html {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+/* Hide scrollbars for clean category horizontal browsing */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Authentic Indian Veg Symbol (Green Dot inside Green Square) */
+.veg-symbol {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #16a34a;
+  display: inline-flex;
+  items-center: center;
+  justify-content: center;
+  padding: 2px;
+  background-color: #ffffff;
+}
+.veg-symbol::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #16a34a;
+  display: block;
+}
+
+/* Line clamp helpers */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Soft transition effects */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
